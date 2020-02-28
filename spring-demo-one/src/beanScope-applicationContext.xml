@@ -11,8 +11,12 @@
     	class = "org.alma.springdemo.HappyFortuneService">
     </bean>
     <bean id="myCoach"
-    	class = "org.alma.springdemo.TrackCoach">
+    	class = "org.alma.springdemo.TrackCoach"
+    	scope="singleton"
+    	init-method="doMyStartupStuff"
+    	destroy-method="doMyCleanStuff">
     	<constructor-arg ref="myFortuneService"/>
+    	
     </bean>
 
 </beans>

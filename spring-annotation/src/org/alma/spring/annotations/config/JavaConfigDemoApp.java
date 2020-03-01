@@ -14,6 +14,8 @@ public class JavaConfigDemoApp {
 		System.out.println(swinCoach.getDailywork());
 		ComponentImpl impl = context.getBean(ComponentImpl.class);
 		System.out.println(impl.getCoach().getDailyFortune());
+		System.out.println(((SwinCoach)swinCoach).getEmail());
+		System.out.println(((SwinCoach)swinCoach).getTeam());
 		// close the configuration	
 		context.close();
 	}

@@ -1,0 +1,4 @@
+.favorite-language {
+	display: flex;
+	flex-direction: columns;
+}

@@ -21,6 +21,8 @@
 	<mvc:annotation-driven/>
 	<!--  link to staitc ressources -->
 	<mvc:resources mapping="/resources/**" location="/resources/"></mvc:resources>
+	<mvc:resources mapping="/images/**" location="/images/"></mvc:resources>
+	<mvc:resources mapping="/pdf/**" location="/pdf/"></mvc:resources>
 	<!--  load custome messages resources -->
 	<bean id="messageSource"
 	class="org.springframework.context.support.ResourceBundleMessageSource">
@@ -48,6 +50,7 @@
 			<props>
 				<prop key ="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
 				<prop key ="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
 			</props>
 		</property>
 	</bean>
